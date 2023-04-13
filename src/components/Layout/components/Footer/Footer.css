@@ -1,0 +1,72 @@
+/* ============ FOOTER =========== */
+
+.app__footer{
+   margin-top: 150px;
+   background-color: rgb(59, 59, 59);
+   color: white;
+   padding: 50px 0;
+}
+
+
+.footer-intro__title{
+   font-size: 2rem;
+   font-weight: bold;
+   margin-bottom: 16px;
+   color: var(--text-color);
+   color: white
+}
+
+.footer-intro__content{
+   font-size: 1.4rem;
+   margin-top: 14px;
+   color: white
+
+}
+
+.footer__container{
+   margin-top: 50px;
+   color: white
+}
+
+.footer__box{
+
+}
+
+.footer-box__title{
+   font-size: 1.5rem;
+   font-weight: 700;
+   color: white
+}
+
+.footer-box__list{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   color: white
+}
+
+.footer-box__item{
+   margin: 0;
+   padding: 1px 0;
+}
+
+.footer-box__link{
+   text-decoration: none;
+   font-size: 1.4rem;
+   color: white
+   
+}
+
+.footer-box__link:hover{
+   color: var(--primary-yellow2);    
+   text-decoration: none;
+}
+
+.footer__logo{
+   width: 300px;
+   margin-left: 200px;
+}
+
+
+
+/* ============ END FOOTER =========== */

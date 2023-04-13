@@ -3,6 +3,7 @@ import {publicRoutes} from './routes'
 import DefaultLayout from './components/Layout/DefaultLayout';
 import { Fragment } from 'react';
 
+
 function App() {
   return (
     <Router>
@@ -21,6 +22,7 @@ function App() {
 
             //để biến nó thành Element 
             const Page = route.component;
+            console.log(Page);
       
             return (
               <Route 
