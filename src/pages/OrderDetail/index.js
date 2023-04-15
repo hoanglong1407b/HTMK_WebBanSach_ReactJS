@@ -44,7 +44,7 @@ function OrderDetail() {
                             <td className="history-item__content history__td">shippingshipping_phone</td>
                             
                         </tr>
-                            <tr className="history__item history__tr">
+                            {/* <tr className="history__item history__tr">
                             <td className="history-item__content history__td">1</td>
                             <td className="history-item__content history__td">madohang1</td>
                             <td className="history-item__content history__td">129.000đ</td>
@@ -54,15 +54,13 @@ function OrderDetail() {
                                     <i className="fa-solid fa-eye"></i>
                                 </a>
                             </td>
-                        </tr>
+                        </tr> */}
                         </table>
 
 
                     <div className="container__history">
                         
                         <div className="history__items history__box">
-                            <div className="history__showing"> -
-                                
                                 <div className="history__order">
                                     <div className="history__item history__showing ">
                                         
@@ -94,7 +92,6 @@ function OrderDetail() {
                                             <p className="history-total__total">ororder_total  đ</p>
                                         </div>
                                     </div>
-                                </div>
                                 </div>
                         </div>
                         

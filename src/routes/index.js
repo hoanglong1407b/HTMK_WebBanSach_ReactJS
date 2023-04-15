@@ -12,7 +12,9 @@ import AccountInfo from '../pages/AccountInfo'
 import HistoryOrder from '../pages/HistoryOrder'
 import Payment from '../pages/Payment'
 import OrderDetail from '../pages/OrderDetail'
-
+import PasswordChange from '../pages/PasswordChange'
+import PayMethod from '../pages/PayMethod'
+import PaySucceed from '../pages/PaySucceed'
 
 //không cần đăng nhập vẫn vào được
 const publicRoutes = [
@@ -24,7 +26,10 @@ const publicRoutes = [
    {path: '/accountinfo', component: AccountInfo, layout: HeaderOnly},
    {path: '/historyorder', component: HistoryOrder},
    {path: '/payment', component: Payment, layout: HeaderOnly},
-   {path: '/OrderDetail', component: OrderDetail}
+   {path: '/orderdetail', component: OrderDetail},
+   {path: '/passwordchange', component: PasswordChange},
+   {path: '/paymethod', component: PayMethod},
+   {path: '/paysucceed', component: PaySucceed, layout: HeaderOnly}
 ];
 
 //phải đăng nhập mới vào được
