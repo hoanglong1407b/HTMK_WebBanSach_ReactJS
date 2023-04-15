@@ -10,9 +10,7 @@ function HeaderOnly({children}) {
       //ví dụ thôi 
       <div>
          <Header/>
-         <div className='container'>
-            <div className='content'>{children}</div>
-         </div>
+         <div className='app__container'>{children}</div>
       </div>
     );
 }

@@ -5,13 +5,20 @@ import HeaderOnly from '../components/Layout/HeaderOnly'
 //Component
 import Home from '../pages/Home'
 import Selling from '../pages/Selling'
-import LoginLogout from '../pages/LoginLogout'
+import DetailProduct from '../pages/DetailProduct'
+import Cart from '../pages/CartPage'
+import Log from '../pages/LogPage'
+import AccountInfo from '../pages/AccountInfo'
+
 
 //không cần đăng nhập vẫn vào được
 const publicRoutes = [
    {path: '/', component: Home},
    {path: '/selling', component: Selling},
-   {path: '/loginlogout', component: LoginLogout, layout: HeaderOnly}
+   {path: '/detailProduct', component: DetailProduct},
+   {path: '/cartpage', component: Cart},
+   {path: '/log', component: Log, layout: HeaderOnly},
+   {path: '/accountinfo', component: AccountInfo, layout: HeaderOnly}
 ];
 
 //phải đăng nhập mới vào được

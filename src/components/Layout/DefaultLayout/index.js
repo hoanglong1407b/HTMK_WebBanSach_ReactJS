@@ -6,14 +6,16 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
+import './DefaultLayout.css'
+
 function DefaultLayout({children}) {
    return (
       //ví dụ thôi 
       <div>
          <Header/>
-         <div className='container'>
-            <div className='content'>{children}</div>
-         </div>
+            <div class="app__container">
+               {children}
+            </div>
          <Footer/>
       </div>
     );
