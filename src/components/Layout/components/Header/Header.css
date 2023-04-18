@@ -248,7 +248,7 @@
 
 .header__category{
     position: relative;
-    width: 100%;
+    min-width: 250px;
     height: 56px;
     display: flex;
     justify-content: space-around;
