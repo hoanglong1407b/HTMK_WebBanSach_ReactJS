@@ -1,10 +1,14 @@
+import {Link} from 'react-router-dom'
+import images from '../../assets/img/index'
+
+
 function ProductItem({name, author, price, col}) {
    return ( 
       <div class={col}>
-         <a href="{{url('pDetail/' . $valueproduct_id)}}" class="classify__linkproduct">
+         <Link to="/detailProduct" class="classify__linkproduct">
             <div class="classify__product">
                <div class="classify-product__box"> 
-                  <img src="{{asset('/frontend/img/products')}}/{{$valueproduct_img}}" alt="" class="classify-product__img"/>
+                  <img src={images.product} alt="" class="classify-product__img"/>
                </div>
                <div class="classify-product__info">
                   <p class="classify-product__title">{name}</p>
@@ -14,7 +18,7 @@ function ProductItem({name, author, price, col}) {
                   </div>
                </div>
             </div>
-         </a>
+         </Link>
       </div>
     );
 }

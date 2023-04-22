@@ -1,3 +1,6 @@
+import {Link} from 'react-router-dom'
+
+
 function Category({title}) {
    return ( 
       <div className="header__category">
@@ -11,7 +14,7 @@ function Category({title}) {
             <ul className="header-dropdown__list">
                {/* <!-- 1 loại danh mục nằm trong thẻ li --> */}
                <li className="header-dropdown__item">
-                  <a href="{{url('category/' . $value->category_id)}}" className="header-dropdown__link">
+                  <Link to="/selling" className="header-dropdown__link">
                      <div className="header-dropdown__link-box">
                         <i className="header-dropdown__link-box__icon fa-solid fa-bars"></i>
                         <span className="header-dropdown__link-box__title">
@@ -19,7 +22,7 @@ function Category({title}) {
                         </span>
                      </div>
                      <i className="header-dropdown__link-icon fa-solid fa-caret-right"></i>
-                  </a>
+                  </Link>
                </li>  
             </ul>
          </div>

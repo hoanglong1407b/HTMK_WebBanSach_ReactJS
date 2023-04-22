@@ -1,5 +1,6 @@
 import './CartPage.css'
 import CartItem from '../../components/CartItem';
+import {Link} from 'react-router-dom'
 
 function CartPage() {
     return ( 
@@ -54,7 +55,7 @@ function CartPage() {
                             </div>
                             
                             <div className="cart__box">
-                                <a href="{{URL::to('/payment')}}"><button className="cart__button">Mua hàng</button></a>
+                                <Link to="/payment"><button className="cart__button">Mua hàng</button></Link>
                             </div>
                             
                         </div>

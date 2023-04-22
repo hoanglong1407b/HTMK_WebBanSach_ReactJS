@@ -10,7 +10,6 @@ function App() {
       <div className="App">
         <Routes>
           {publicRoutes.map(function(route , index) {
-
             //nếu layout = null (theo nghĩa đen được định nghĩa bên file route) thì trả ra Fragment(là 1 Element rỗng)
             //Không phải thì trả ra DefaultLayout có Header và Sidebar
             let Layout = DefaultLayout
@@ -19,20 +18,16 @@ function App() {
             }else if (route.layout === null){
               Layout = Fragment
             }
-
             //để biến nó thành Element 
             const Page = route.component;
-      
             return (
-              <Route 
-                key={index} 
-                path={route.path} 
+              <Route key={index} path={route.path} 
                 element={
                   <Layout key={index}>
                     <Page/>
                   </Layout>
                 }
-                />
+              />
             )
           })}
         </Routes>

@@ -27,7 +27,7 @@ const publicRoutes = [
    {path: '/accountinfo', component: AccountInfo, layout: InfoLayout},
    {path: '/historyorder', component: HistoryOrder,layout: InfoLayout},
    {path: '/payment', component: Payment, layout: HeaderOnly},
-   {path: '/orderdetail', component: OrderDetail},
+   {path: '/orderdetail', component: OrderDetail, layout: InfoLayout},
    {path: '/passwordchange', component: PasswordChange, layout: InfoLayout},
    {path: '/paymethod', component: PayMethod},
    {path: '/paysucceed', component: PaySucceed, layout: HeaderOnly}

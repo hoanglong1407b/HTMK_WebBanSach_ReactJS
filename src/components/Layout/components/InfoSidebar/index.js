@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 import './InfoSidebar.css';
 
 
@@ -7,15 +9,15 @@ function InfoSidebar() {
             <ul className="profile-sidebar__list">
                 <li className="profile-sidebar__item">
                     <i className="profile-sidebar__icon fa-solid fa-user"></i>
-                    <a href="{{URL::to('/accountInfo')}}/{{ auth('customer')->user()->customer_id }}" className="profile-sidebar__link">
+                    <Link to="/accountInfo" className="profile-sidebar__link">
                         Thông tin tài khoản
-                    </a>
+                    </Link>
                 </li>
                 <li className="profile-sidebar__item">
                     <i className="profile-sidebar__icon fa-sharp fa-solid fa-rectangle-vertical-history"></i>
-                    <a href="{{URL::to('/historyOrder')}}/{{ auth('customer')->user()->customer_id }}" className="profile-sidebar__link">
+                    <Link to="/historyOrder" className="profile-sidebar__link">
                         Lịch sử mua hàng
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </div>

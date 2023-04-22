@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 function HistoryOrderItem({id, price, date, status}) {
    return ( 
 
@@ -11,9 +13,9 @@ function HistoryOrderItem({id, price, date, status}) {
             {status === "2" && <span style={{color:'forestgreen'}}>Đã xử lý</span>}
          </td>
          <td className="history-item__content history__td">
-            <a href="{{URL::to('/detailPayment')}}/{{$ordorder_id}}" className="history-item__link">
+            <Link to="/orderDetail" className="history-item__link">
                   <i className="fa-solid fa-eye"></i>
-            </a>
+            </Link>
          </td>
       </tr>
     );

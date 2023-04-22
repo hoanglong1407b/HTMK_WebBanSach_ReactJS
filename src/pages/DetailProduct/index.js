@@ -1,5 +1,6 @@
 import './DetailProduct.css'
 import DetailProductInfo from "../../components/DetailProductInfo";
+import images from '../../assets/img/index'
 
 
 function DetailProduct() {
@@ -11,7 +12,7 @@ function DetailProduct() {
                     <input type="hidden" value="{{asset($productproduct_name)}}"/>
                     <div className="row">
                         <DetailProductInfo 
-                            name="tên sản phẩm nè" author="Tên tác giả nè" img="source" 
+                            name="tên sản phẩm nè" author="Tên tác giả nè" img={images.product} 
                             lastPrice="1.000.000đ" discount="15%" originPrice="20.000.000" 
                             status="còn hàng" content="Đây là content của sản phẩm nhé hahahahahhhâ"
                         />

@@ -1,9 +1,11 @@
+import images from '../../assets/img/index'
+
 function CartItem({name, productPrice, type, quantity, productTotal, cartType = "0"}) {
    return ( 
       <div className="cart__item cart__showing ">
          <div className="cart-item__product cart--flex4">
                <div className="cart-item__imgbox">
-                  <img className="cart-item__img" src="{{URL::to('./frontend/img/products/'.$v_contentoptionsimage)}}" alt="" width="60"/>
+                  <img className="cart-item__img" src={images.product} alt="" width="60"/>
                </div>
                <div className="cart-item__info">
                   <h2 className="cart-item__title">{name}</h2>

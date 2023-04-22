@@ -1,4 +1,6 @@
 import './Payment.css'
+import {Link} from 'react-router-dom'
+
 
 function Payment() {
     return ( 
@@ -41,9 +43,9 @@ function Payment() {
                 </span>
             </div>
 
-             <a href="{{URL::to('/successpayment')}}" className="pay__buttonlink">
+             <Link to="/payMethod" className="pay__buttonlink">
                 <button type="submit" className="pay__button">Giao đến địa chỉ này</button>
-             </a> 
+             </Link> 
 
         </form>
     </div>

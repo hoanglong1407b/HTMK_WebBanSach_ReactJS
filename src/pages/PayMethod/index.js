@@ -1,5 +1,6 @@
 import './PayMethod.css'
 import CartItem from '../../components/CartItem';
+import {Link} from 'react-router-dom'
 
 function PayMethod() {
     return ( 
@@ -89,7 +90,7 @@ function PayMethod() {
                                 </div>
                                 
                                 <div className="cart__box">
-                                    <a href="URL::to('/payment')"><button className="cart__button method__button">Mua hàng</button></a>
+                                    <Link to="/paySucceed"><button className="cart__button method__button">Mua hàng</button></Link>
                                 </div>
                             </div>
                         </form>

@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 function DetailProduct({name, author, lastPrice, discount, originPrice, status, content, img}) {
    return ( 
       <>
@@ -51,10 +53,10 @@ function DetailProduct({name, author, lastPrice, discount, originPrice, status, 
                <input name="productid_hidden" type="hidden"  value="{{$productproduct_id}}" />
                {/* <p className="detail-info__phone">Gọi đặt hàng: <span>079 2345 8732</span> hoặc <span>089 1293 833</span></p> - */}
                <div className="detail-info__btns">
-                  <a href="{{URL::to('/cart')}}" className="detail-info__btnlink">
-                        <button className="detail-info__btn" type="submit">Thêm vào giỏ hàng</button></a>
-                  <a href="{{URL::to('/payment')}}" className="detail-info__btnlink">
-                        <button className="detail-info__btn detail-info__btn--green">Thanh toán ngay</button></a>
+                  <Link to="/cartPage" className="detail-info__btnlink">
+                        <button className="detail-info__btn" type="submit">Thêm vào giỏ hàng</button></Link>
+                  <Link to="/payment" className="detail-info__btnlink">
+                        <button className="detail-info__btn detail-info__btn--green">Thanh toán ngay</button></Link>
                </div>
                {!status && <div className="detail-info__btns">
                         <span><h2 className="detail-more__title" style={{color: 'red'}}>SẢN PHẨM ĐÃ HẾT HÀNG</h2></span>

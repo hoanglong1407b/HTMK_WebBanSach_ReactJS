@@ -1,14 +1,16 @@
 import Phone from "./Phone";
 import CartButton from "./CartButton";
 import Search from "./Search";
+import {Link} from "react-router-dom"
+import images from '../../../../../assets/img/index'
 
 function Mid() {
    return ( 
       <div className="header__mid">
          <div className="grid">
-            <a href="{{URL::to('/')}}" className="header-mid__logo-link">
-               <img src="{{asset('frontend/img/logo2.png')}}" alt="" className="header-mid__logo"/>
-            </a>
+            <Link to="/" className="header-mid__logo-link">
+               <img src={images.logo} alt="" className="header-mid__logo"/>
+            </Link>
             <div className="header-mid__search-box">
                <Search/>
             </div>
