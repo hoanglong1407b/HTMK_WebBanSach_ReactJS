@@ -4,6 +4,7 @@
 //sidebar
 
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 import InfoSidebar from '../components/InfoSidebar';
 
 import './InfoLayout.css'
@@ -23,6 +24,7 @@ function InfoLayout({children}) {
                </div>
             </div>
          </div>
+         <Footer/>
       </>
     );
 }

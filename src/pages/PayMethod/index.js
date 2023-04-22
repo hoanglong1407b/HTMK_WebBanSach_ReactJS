@@ -1,4 +1,5 @@
 import './PayMethod.css'
+import CartItem from '../../components/CartItem';
 
 function PayMethod() {
     return ( 
@@ -43,52 +44,9 @@ function PayMethod() {
 
                             </div>
                             <div className="cart__items cart__box">
-                                {/* <!-- <div className="cart__showing"> - */}
-                                  
-                                    <div className="cart__item cart__showing ">
-
-                                        <div className="cart-item__product cart--flex4">
-                                            <div className="cart-item__imgbox">
-                                                <img className="cart-item__img" src="URL::to('./frontend/img/products/'.$v_contentoptionsimage)" alt="" width="60"/>
-                                            </div>
-    
-                                            <div className="cart-item__info">
-                                                <h2 className="cart-item__title">$v_contentname</h2>
-                                                {/* -- <div className="cart-item__box">
-                                                    <span>Tác giả:</span>
-                                                    <p className="cart-item__author">v_contentweight</p>
-                                                </div> --
-                                                -- <div className="cart-item__box">
-                                                    <span>Loại:</span>
-                                                    <p className="cart-item__type">Sách</p>
-                                                </div> -- */}
-                                            </div>
-                                        </div>
-
-                                     
-                                            <div className="cart-item__price cart--flex3">
-                                                <p className="cart-item__lastprice">tien vnđ'</p>
-                                                {/* -- <p className="cart-item__lastprice">102,000 đ</p>
-                                                <p className="cart-item__originprice">120,000 đ</p> -- */}
-                                            </div>
-                                   
-                                            <div className="cart-item__quantity cart--flex2 quantity">
-                                                <input type="hidden" value="$v_contentrowId" name="rowId_cart" className="form-control"/>
-                                            
-                                                {/* -- <button className="quantify-down cart-item__down cart-item__btn">-</button> -- */}
-                                                <input className="cart_quantity_input" type="number" max="5" min="1" name="cart_quantity" value="$v_contentqty"  disabled/>
-                                                {/* -- <button className="quantify-up cart-item__up cart-item__btn">cập nhật</button> -- */}
-                                              
-                                            </div> 
-                                      
-                                            <p className="cart-item__total cart--flex2">sub total</p>
-                                            <a href="URL::to('/delete-to-cart/'.$v_contentrowId)"><i className="cart-item__icon fa-regular fa-trash"></i></a>
-                                       
-                                       
-
-                                    </div>
-                                   
-                                {/* </div> */}
+                                <CartItem name="Tên sản phẩm" productPrice="1 tỷ đô" type="thể loại sách" quantity="1" productTotal="3 tỷ đô" cartType="1"/>
+                                <CartItem name="Tên sản phẩm" productPrice="1 tỷ đô" type="thể loại sách" quantity="1" productTotal="3 tỷ đô" cartType="1"/>
+                                <CartItem name="Tên sản phẩm" productPrice="1 tỷ đô" type="thể loại sách" quantity="1" productTotal="3 tỷ đô" cartType="1"/>
                             </div>
                             
                         </div>
@@ -98,13 +56,13 @@ function PayMethod() {
                         <div className="cart__prices cart__box">
                             <div className="cart__prices cart__box">
                                 <div className="cart-prices__box">
-                                    <span>Thue</span>
-                                    <p className="cart-prices__before">tien vnd</p>
+                                    <span>Thuế</span>
+                                    <p className="cart-prices__before">100.000đ</p>
                                 </div>
 
                                 <div className="cart-prices__box">
                                     <span>Tổng tiền</span>
-                                    <p className="cart-prices__after">tien vnd</p>
+                                    <p className="cart-prices__after">10.000.000đ</p>
                                 </div>
                             </div>
                         </div>

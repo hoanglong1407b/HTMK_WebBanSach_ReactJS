@@ -22,7 +22,6 @@ function App() {
 
             //để biến nó thành Element 
             const Page = route.component;
-            console.log(Page);
       
             return (
               <Route 
