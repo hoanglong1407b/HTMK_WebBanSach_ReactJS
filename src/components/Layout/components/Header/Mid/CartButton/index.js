@@ -4,7 +4,7 @@ function CartButton() {
          <div className="header-mid__cart">
             <i className="header-mid__cart-logo fa-regular fa-cart-shopping"></i>
             <span className="header-mid__cart-title">Giỏ hàng</span>
-            <span className="header-mid__cart-quantity">Cart::count</span>
+            <span className="header-mid__cart-quantity">(1)</span>
          </div>
       </a>
     );

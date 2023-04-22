@@ -3,82 +3,54 @@ import './AccountInfo.css'
 function AccountInfo() {
     return ( 
     <>
-        <div className="grid">
-                <div className="row">
-                    <div className="col-3">
-                        <div className="profile__sidebar">
-                            
-                            <ul className="profile-sidebar__list">
-                                <li className="profile-sidebar__item">
-                                    <i className="profile-sidebar__icon fa-solid fa-user"></i>
-                                    <a href="{{URL::to('/accountInfo')}}/{{ auth('customer')->user()->customer_id }}" className="profile-sidebar__link">
-                                        Thông tin tài khoản
-                                    </a>
-                                </li>
-                                <li className="profile-sidebar__item">
-                                    <i className="profile-sidebar__icon fa-sharp fa-solid fa-rectangle-vertical-history"></i>
-                                    <a href="{{URL::to('/historyOrder')}}/{{ auth('customer')->user()->customer_id }}" className="profile-sidebar__link">
-                                        Lịch sử mua hàng
-                                    </a>
-                                </li>
-                            </ul>
-           
-                        </div>
+        <div className="container__account">
+            <h2 className="account__title">Hồ sơ của tôi</h2>
+
+            <form action="{{URL::to('/savechange')}}" className="account__form">
+                <div className="account__info">
+                    <input type="hidden" value="{{$customer->customer_id}}" name="customer_id"/>
+                    <div className="account-info__group">
+                        <label for="username" className="account-info__label">Tên đăng nhập</label>
+                        <input id="username" name="customer_username" type="text" className="account-info__input" value="{{$customer->customer_username}}"/>
                     </div>
-                    <div className="col-9">
-                        <div className="container__account">
-                            <h2 className="account__title">Hồ sơ của tôi</h2>
-                            
+                    <div className="account-info__group">
+                        <label for="fullname" className="account-info__label">Tên</label>
+                        <input id="fullname" name="customer_name" type="text" className="account-info__input" value="{{$customer->customer_name}}"/>
+                    </div>
+                    <div className="account-info__group">
+                        <label for="email" className="account-info__label">Email</label>
+                        <input id="email" name="email" type="email" className="account-info__input" value="{{$customer->email}}"/>
+                    </div>
+                    <div className="account-info__group">
+                        <label for="phone" className="account-info__label">Số điện thoại</label>
+                        <input id="phone" name="customer_phone" type="text" className="account-info__input" value="{{$customer->customer_phone}}"/>
+                    </div>
 
-                            <form action="{{URL::to('/savechange')}}" className="account__form">
-                                <div className="account__info">
-                                    <input type="hidden" value="{{$customer->customer_id}}" name="customer_id"/>
-                                    <div className="account-info__group">
-                                        <label for="username" className="account-info__label">Tên đăng nhập</label>
-                                        <input id="username" name="customer_username" type="text" className="account-info__input" value="{{$customer->customer_username}}"/>
-                                    </div>
-                                    <div className="account-info__group">
-                                        <label for="fullname" className="account-info__label">Tên</label>
-                                        <input id="fullname" name="customer_name" type="text" className="account-info__input" value="{{$customer->customer_name}}"/>
-                                    </div>
-                                    <div className="account-info__group">
-                                        <label for="email" className="account-info__label">Email</label>
-                                        <input id="email" name="email" type="email" className="account-info__input" value="{{$customer->email}}"/>
-                                    </div>
-                                    <div className="account-info__group">
-                                        <label for="phone" className="account-info__label">Số điện thoại</label>
-                                        <input id="phone" name="customer_phone" type="text" className="account-info__input" value="{{$customer->customer_phone}}"/>
-                                    </div>
-
-                                    <div className="account-info__group">
-                                        <label for="phone" className="account-info__label"><a href="{{URL::to('/accountPasswordChange')}}/{{ auth('customer')->user()->customer_id }}" className="account-info__link">Đổi mật khẩu</a></label>
-                                        
-                                    </div>
-                                    <div className="account-info__group">
-                                        <label for="phone" className="account-info__label"></label>
-                                        <button className="account-info__button">Lưu</button>
-                                    </div>
-                                    
-                                    
-                                </div>
-                                <div className="account__avatar">
-                                    <div className="account-avatar__avtbox">
-                                        
-                                        <img className="avatar" 
-                                            style={{verticalAlign: 'middle',width: '160px',height: '160px', borderRadius: '50%'}} 
-                                            src="{{asset('/frontend/img/account/')}}/{{$customer->customer_avatar}}" 
-                                            alt="{{$customer->customer_avatar}}" />
-                                        
-                                        <input type="file" name="avatar" value="" aria-label="File browser example" className="account-avatar__input" />   
-
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                    <div className="account-info__group">
+                        <label for="phone" className="account-info__label"><a href="{{URL::to('/accountPasswordChange')}}/{{ auth('customer')->user()->customer_id }}" className="account-info__link">Đổi mật khẩu</a></label>
+                        
+                    </div>
+                    <div className="account-info__group">
+                        <label for="phone" className="account-info__label"></label>
+                        <button className="account-info__button">Lưu</button>
                     </div>
                     
+                    
                 </div>
-            </div>
+                <div className="account__avatar">
+                    <div className="account-avatar__avtbox">
+                        
+                        <img className="avatar" 
+                            style={{verticalAlign: 'middle',width: '160px',height: '160px', borderRadius: '50%'}} 
+                            src="{{asset('/frontend/img/account/')}}/{{$customer->customer_avatar}}" 
+                            alt="{{$customer->customer_avatar}}" />
+                        
+                        <input type="file" name="avatar" value="" aria-label="File browser example" className="account-avatar__input" />   
+
+                    </div>
+                </div>
+            </form>
+        </div>
     </>
      );
 }

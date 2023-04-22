@@ -11,13 +11,13 @@ import './DefaultLayout.css'
 function DefaultLayout({children}) {
    return (
       //ví dụ thôi 
-      <div>
+      <>
          <Header/>
             <div class="app__container">
                {children}
             </div>
          <Footer/>
-      </div>
+      </>
     );
 }
 

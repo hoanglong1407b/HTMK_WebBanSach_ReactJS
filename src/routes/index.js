@@ -15,6 +15,7 @@ import OrderDetail from '../pages/OrderDetail'
 import PasswordChange from '../pages/PasswordChange'
 import PayMethod from '../pages/PayMethod'
 import PaySucceed from '../pages/PaySucceed'
+import InfoLayout from '../components/Layout/InfoLayout'
 
 //không cần đăng nhập vẫn vào được
 const publicRoutes = [
@@ -23,7 +24,7 @@ const publicRoutes = [
    {path: '/detailProduct', component: DetailProduct},
    {path: '/cartpage', component: Cart},
    {path: '/log', component: Log, layout: HeaderOnly},
-   {path: '/accountinfo', component: AccountInfo, layout: HeaderOnly},
+   {path: '/accountinfo', component: AccountInfo, layout: InfoLayout},
    {path: '/historyorder', component: HistoryOrder},
    {path: '/payment', component: Payment, layout: HeaderOnly},
    {path: '/orderdetail', component: OrderDetail},

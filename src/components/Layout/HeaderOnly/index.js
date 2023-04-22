@@ -8,10 +8,10 @@ import Header from '../components/Header'
 function HeaderOnly({children}) {
    return (
       //ví dụ thôi 
-      <div>
+      <>
          <Header/>
          <div className='app__container'>{children}</div>
-      </div>
+      </>
     );
 }
 
