@@ -8,11 +8,11 @@ function Search() {
       {cname: "NXB 1"},
       {cname: "NXB 2"},{cname: "NXB 3"},{cname: "NXB 4"},
    ]
-   const dm = items.map(function(item){
-      return (<option value="" className="header-mid__option">{item.cname}</option>)
+   const dm = items.map(function(item, index){
+      return (<option key={index} value="" className="header-mid__option">{item.cname}</option>)
    })
-   const nxb = items2.map(function(item){
-      return (<option value="" className="header-mid__option">{item.cname}</option>)
+   const nxb = items2.map(function(item, index){
+      return (<option key={index} value="" className="header-mid__option">{item.cname}</option>)
    })
    
    return ( 

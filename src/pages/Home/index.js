@@ -33,9 +33,9 @@ function Home() {
    ]
    return (
       <>
-      <div class="grid">
-         <div class="row">
-            <div class="col">
+      <div className="grid">
+         <div className="row">
+            <div className="col">
                <Slider/>
             </div>
          </div>

@@ -13,7 +13,7 @@ function DefaultLayout({children}) {
       //ví dụ thôi 
       <>
          <Header/>
-            <div class="app__container">
+            <div className="app__container">
                {children}
             </div>
          <Footer/>

@@ -4,17 +4,17 @@ import images from '../../assets/img/index'
 
 function ProductItem({name, author, price, col}) {
    return ( 
-      <div class={col}>
-         <Link to="/detailProduct" class="classify__linkproduct">
-            <div class="classify__product">
-               <div class="classify-product__box"> 
-                  <img src={images.product} alt="" class="classify-product__img"/>
+      <div className={col}>
+         <Link to="/detailProduct" className="classify__linkproduct">
+            <div className="classify__product">
+               <div className="classify-product__box"> 
+                  <img src={images.product} alt="" className="classify-product__img"/>
                </div>
-               <div class="classify-product__info">
-                  <p class="classify-product__title">{name}</p>
-                  <p class="classify-product__author">{author}</p>
-                  <div class="classify-product__pricebox">
-                     <span class="classify-pricebox__lastprice">{price}</span>
+               <div className="classify-product__info">
+                  <p className="classify-product__title">{name}</p>
+                  <p className="classify-product__author">{author}</p>
+                  <div className="classify-product__pricebox">
+                     <span className="classify-pricebox__lastprice">{price}</span>
                   </div>
                </div>
             </div>

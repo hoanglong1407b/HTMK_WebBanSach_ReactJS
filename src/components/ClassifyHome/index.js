@@ -1,25 +1,25 @@
 import ProductItem from "../ProductItem";
 
 function ClassifyHome({title, items, grid}) {
-   const abc = items.map(function(item){
+   const abc = items.map(function(item, index){
          return (
             <ProductItem 
+               key={index}
                name={item.pname} 
                author={item.author} 
                price={item.price} 
                col="col-3"/>
          )
       })
-      console.log(grid);
-   const inside = (<div class="grid">
-         <div class="row">
-            <div class="col">
-               <div class="classify">
-                  <h2 class="classify__title">
+   const inside = (<div className="grid">
+         <div className="row">
+            <div className="col">
+               <div className="classify">
+                  <h2 className="classify__title">
                         <p>{title}</p>
                   </h2>
-                  <div class="classify__products">
-                     <div class="row">
+                  <div className="classify__products">
+                     <div className="row">
                         {abc}
                      </div>
                   </div>
@@ -33,7 +33,7 @@ function ClassifyHome({title, items, grid}) {
        );
    }else if(grid === "full"){
       return ( 
-         <div class="grid__full-width app-class__container">
+         <div className="grid__full-width app-class__container">
             {inside}
          </div>
        );

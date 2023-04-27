@@ -1,7 +1,7 @@
 import './CartPage.css'
 import CartItem from '../../components/CartItem';
 import {Link} from 'react-router-dom'
-import { useState } from 'react';
+// import { useState } from 'react';
 
 function CartPage() {
     let api = [

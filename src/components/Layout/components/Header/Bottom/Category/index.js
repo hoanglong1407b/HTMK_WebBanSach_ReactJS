@@ -1,9 +1,10 @@
 import CategoryItem from '../CategoryItem';
 
 function Category({title, items}) {
-   const abc = items.map(function(item){
+   const abc = items.map(function(item, index){
       return (
          <CategoryItem 
+            key={index}
             name={item.cname} 
          />
       )
