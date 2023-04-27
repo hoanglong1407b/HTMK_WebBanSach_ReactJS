@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 
-import './InfoSidebar.css';
+// import './InfoSidebar.css';
 
 
 function InfoSidebar() {

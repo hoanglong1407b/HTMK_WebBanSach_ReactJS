@@ -1,7 +1,29 @@
-import ProductItem from "../../components/ProductItem";
 import Sidebar from "../../components/Sidebar";
+import ClassifySelling from "../../components/ClassifySelling";
 
 function Selling() {
+   let items = [
+      {
+         pname: "Sách hay sách đỉnh sách xịn quá trời xịn",
+         author: "HAHAHAHAHAHAH ",
+         price: "1000000000đ",
+      },
+      {
+         pname: "Đọc làm chó hahahahahahhâ",
+         author: "Long nef ",
+         price: "1000000000đ",
+      },
+      {
+         pname: "Sách hay sách đỉnh sách xịn quá trời xịn",
+         author: "đỉnh chưa ",
+         price: "1000000000đ",
+      },
+      {
+         pname: "Sách hơi bị đink~",
+         author: "Long nef ",
+         price: "1000000000đ",
+      }
+   ]
    return (
       <div className="grid">
          <div className="row">
@@ -11,22 +33,7 @@ function Selling() {
             </div>
 
             <div className="col-9">
-               <div className="classify">
-                  <h2 className="classify__title">cateName</h2>
-                  <div className="classify__products">
-                     <div className="row">
-                        {/* <div className="col-4">
-                           <p className="classify-product__title">đang cập nhật</p>
-                        </div> */}
-                        <ProductItem name="Sách hay sách đỉnh sách xịn quá trời xịn" author="Long nè" price="1000000000đ" col="col-4"/>
-                        <ProductItem name="Sách hay sách đỉnh sách xịn quá trời xịn" author="Long nè" price="1000000000đ" col="col-4"/>
-                     </div>
-                  </div>
-                  {/* <div className="paging__container">
-                     <p className="paging__box">1</p>
-                     <p className="paging__box">1</p>
-                  </div> */}
-               </div>
+               <ClassifySelling title="Catename" items={items}/>
             </div>
          </div>
    </div>
