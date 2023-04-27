@@ -1,8 +1,38 @@
 import './CartPage.css'
 import CartItem from '../../components/CartItem';
 import {Link} from 'react-router-dom'
+import { useState } from 'react';
 
 function CartPage() {
+    let api = [
+        {
+            pname: "Sách ABC",
+            price: 100000,
+            type: "Tiểu thuyết",
+            quantity: 1,
+        },
+        {
+            pname: "Sách ABC",
+            price: 200000,
+            type: "Tiểu thuyết",
+            quantity: 2,
+        },
+        {
+            pname: "Sách ABC",
+            price: 120000,
+            type: "Tiểu thuyết",
+            quantity: 3,
+        },
+    ]
+    // let [api2, setApi2] = useState(api);
+    let total = 0;
+    const items = api.map(function(item){
+        let productTotal = item.price * item.quantity;
+        total += productTotal;
+        return (
+            <CartItem name={item.pname} productPrice={item.price} type={item.type} quantity={item.quantity} productTotal={productTotal}/>
+        );
+    })
     return ( 
     <>
         <div className="grid">
@@ -20,9 +50,7 @@ function CartPage() {
 
                             </div>
                             <div className="cart__items cart__box">
-                                <CartItem name="Tên sản phẩm" productPrice="1 tỷ đô" type="thể loại sách" quantity="1" productTotal="3 tỷ đô"/>
-                                <CartItem name="Tên sản phẩm" productPrice="1 tỷ đô" type="thể loại sách" quantity="1" productTotal="3 tỷ đô"/>
-                                <CartItem name="Tên sản phẩm" productPrice="1 tỷ đô" type="thể loại sách" quantity="1" productTotal="3 tỷ đô"/>
+                                {items}
                             </div>
                         </div>
                      
@@ -50,7 +78,7 @@ function CartPage() {
 
                                 <div className="cart-prices__box">
                                     <span>Tổng tiền</span>
-                                    <p className="cart-prices__after">Tổng giá</p>
+                                    <p className="cart-prices__after">{total}</p>
                                 </div>
                             </div>
                             

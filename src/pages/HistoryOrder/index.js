@@ -2,6 +2,38 @@ import './HistoryOrder.css'
 import HistoryOrderItem from '../../components/HistoryOrderItem';
 
 function HistoryOrder() {
+    let api = [
+        {
+            id: "1235", 
+            price: "100.000đ",
+            date: "14/07/2001",
+            status: "0"
+        },
+        {
+            id: "1235", 
+            price: "200.000đ",
+            date: "14/07/2001",
+            status: "2"
+        },
+        {
+            id: "1235", 
+            price: "300.000đ",
+            date: "14/07/2001",
+            status: "2"
+        },
+        {
+            id: "1235", 
+            price: "200.000đ",
+            date: "14/07/2001",
+            status: "1"
+        },
+    ]
+    // let [api2, setApi2] = useState(api);
+    const items = api.map(function(item){
+        return (
+            <HistoryOrderItem id={item.id} price={item.price} date={item.date} status={item.status}/>
+        );
+    })
     return ( 
     <>
     <div className="container__history">
@@ -15,9 +47,7 @@ function HistoryOrder() {
                     <th className="history-heading__title history__td"></th>
                 </tr>
 
-                <HistoryOrderItem id="1235" price="100.000đ" date="14/07/2001" status="0"/>
-                <HistoryOrderItem id="1235" price="100.000đ" date="14/07/2001" status="1"/>
-                <HistoryOrderItem id="1235" price="100.000đ" date="14/07/2001" status="2"/>
+                {items}
                 
             </table>
         </div>

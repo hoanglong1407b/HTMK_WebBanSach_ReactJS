@@ -3,6 +3,33 @@ import OrderDetailItem from '../../components/OrderDetailItem';
 import images from '../../assets/img/index'
 
 function OrderDetail() {
+    let api = [
+        {
+            pname: "Sách ABC",
+            author: "Long nè",
+            price: 100000,
+            quantity: 1,
+        },
+        {
+            pname: "Sách ABC",
+            author: "Long nè",
+            price: 100000,
+            quantity: 1,
+        },
+        {
+            pname: "Sách ABC",
+            author: "Long nè",
+            price: 100000,
+            quantity: 1,
+        },
+    ]
+    let total = 0;
+    const items = api.map(function(item){
+        total += item.price;
+        return (
+            <OrderDetailItem name={item.pname} author={item.author} quantity={item.quantity} price={item.price} img={images.product}/>
+        );
+    })
     return ( 
     <>
         <table className="history__table">
@@ -22,11 +49,11 @@ function OrderDetail() {
         <div className="container__history">
             <div className="history__items history__box">
                 <div className="history__order">
-                    <OrderDetailItem name="Tên sách nè" author="Long viết đó" quantity="2" price="2 tỷ đồng" img={images.product}/>
+                    {items}
                     <div className="history-order__totalbox">
                         <div className="history-order__total">
                             <span>Tổng số tiền:</span>
-                            <p className="history-total__total">ororder_total  đ</p>
+                            <p className="history-total__total">{total}đ</p>
                         </div>
                     </div>
                 </div>
